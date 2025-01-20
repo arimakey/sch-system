@@ -11,13 +11,13 @@ export class User {
 	@Column()
 	password: string;
 
-	@Column()
+	@Column({default: 'user'})
 	role: string;
 
-	@Column()
+	@Column({unique: true})
 	username: string;
 
-	@Column()
+	@Column({unique: true})
 	email: string;
 
 	@Column()
